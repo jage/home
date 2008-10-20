@@ -1,0 +1,3 @@
+load_keychain '/opt/local/bin/keychain'
+PATH=/usr/local/git/bin:$PATH:/usr/local/mysql/bin
+alias flushdns="sudo dscacheutil -flushcache"
