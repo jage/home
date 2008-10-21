@@ -1,3 +1,15 @@
 load_keychain '/opt/local/bin/keychain'
 PATH=/usr/local/git/bin:$PATH:/usr/local/mysql/bin
+
+# Flush the DNS cache
 alias flushdns="sudo dscacheutil -flushcache"
+
+# Vacuum the Aperture database
+alias vacuum_aperture="sqlite3 ~/Pictures/Aperture\ Library.aplibrary/Aperture.aplib/Library.apdb vacuum"
+# Vacuum the Mail index
+alias vacuum_mail="sqlite3 ~/Library/Mail/Envelope\ Index vacuum"
+
+# MySQL tunnel
+mysql_tunnel() {
+	ssh -L3306:localhost:3306 $1 -N
+}
