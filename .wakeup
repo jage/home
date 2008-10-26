@@ -1,3 +1,5 @@
 #!/bin/sh
 
+# This file is executed by SleepWatcher on wakeup <http://www.bernhard-baehr.de/>
+
 sh ~/bin/update-location.sh

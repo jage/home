@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# For Mac OS X 10.5 (Leopard)
+
 # Figure out the SSID of the current WLAN
 ssid=`ioreg -l -n AirPortDriver | grep APCurrentSSID | sed 's/^.*= "\(.*\)".*$/\1/; s/ /_/g'`
 
