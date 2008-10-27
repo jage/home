@@ -1,5 +1,6 @@
 #!/bin/sh
 
 # This file is executed by SleepWatcher on wakeup <http://www.bernhard-baehr.de/>
-
+# Takes some time for the WLAN to see all the APs, so sleep a few seconds
+sleep 5
 sh ~/bin/update-location.sh
