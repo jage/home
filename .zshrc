@@ -55,7 +55,7 @@ case $OS in
 	;;
 
 	Darwin)    
-		PREFIX=('/usr/local' '/opt/local')
+		PREFIX=('/opt/local' '/usr/local')
 	;;
 	DragonFly)
 		PREFIX=('/usr/local' '/usr/pkg')
