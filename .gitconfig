@@ -1,6 +1,11 @@
 [user]
 	email = johan@duh.se
 	name = Johan Eckerström
+[branch]
+	autosetupmerge = true
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
 [color]
 	branch = auto
 	diff = auto
