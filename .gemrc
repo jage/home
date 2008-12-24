@@ -1,0 +1,2 @@
+gem:  --gen-rdoc
+rdoc: --inline-source --line-numbers
