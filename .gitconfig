@@ -1,0 +1,24 @@
+[user]
+	email = johan@duh.se
+	name = Johan Eckerström
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[color]
+	ui = true
+[core]
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
