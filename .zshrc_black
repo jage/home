@@ -3,9 +3,6 @@ export PATH=/usr/local/bin:/usr/local/git/bin:$PATH:/usr/local/mysql/bin
 export PYTHONPATH=/Library/Python/2.5/site-packages
 export PYTHONSTARTUP=~/.pythonrc.py
 
-# I like colors
-export CLICOLOR=1
-
 # Flush the DNS cache
 alias flushdns="sudo dscacheutil -flushcache"
 

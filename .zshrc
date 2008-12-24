@@ -120,6 +120,10 @@ esac
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
+
+# I like colors
+export CLICOLOR=1
+
 # colorls
 if which colorls &> /dev/null; then
 	alias ls='colorls -FG'
