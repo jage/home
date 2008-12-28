@@ -14,9 +14,15 @@ for i in `find $1 -type f -name '*.rar' \
 	-and ! -name '*part*.rar' \
 	-or -name '*part01.rar'`; do
 	directory=`dirname $i`
-	echo $i
+	echo -n $i
 	unrar x -o+ $i $directory >/dev/null || exit 1
 	ecode=$?
+
+	if [ $ecode -eq 0 ]; then
+		echo ' - Ok'
+	else
+		echo ' - Not ok'
+	fi
 	
 	# Delete if -d is specified and unrar was ok 
 	if [ "X${2}" = "X-d" -a $ecode -eq 0 ]; then
