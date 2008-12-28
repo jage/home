@@ -1,0 +1,12 @@
+[ui]
+username = Johan Eckerström <johan@duh.se>
+
+[extensions]
+hgext.extdiff =
+
+[extdiff]
+cmd.opendiff = opendiff-w
+
+[merge-tools]
+filemerge.executable = opendiff-w
+filemerge.args = $local $other -ancestor $base -merge $output
