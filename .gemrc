@@ -1,2 +1,11 @@
-gem:  --gen-rdoc
+--- 
+:verbose: true
+gem: --gen-rdoc
+:benchmark: false
+:sources: 
+- http://gems.rubyforge.org/
+- http://gems.github.com
+:update_sources: true
+:backtrace: false
 rdoc: --inline-source --line-numbers
+:bulk_threshold: 1000
