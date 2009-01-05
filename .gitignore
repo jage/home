@@ -1,0 +1,5 @@
+*.DS_Store
+*.TemporaryItems
+.ssh
+.zsh/cache
+.apdisk

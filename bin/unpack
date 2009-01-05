@@ -5,7 +5,7 @@
 # Find all rar archives, unpack them in the directory they're found in.
 # if -d, delete the archives after they've been unrared
 
-if [ "X"$1 == "X" ]; then
+if [ "X${1}" = "X" ]; then
 	echo "Usage: unpack /warez [-d]"
 	exit 1
 fi
@@ -14,11 +14,18 @@ for i in `find $1 -type f -name '*.rar' \
 	-and ! -name '*part*.rar' \
 	-or -name '*part01.rar'`; do
 	directory=`dirname $i`
-	unrar x -o+ $i $directory || exit 1
+	echo -n $i
+	unrar x -o+ $i $directory >/dev/null || exit 1
 	ecode=$?
+
+	if [ $ecode -eq 0 ]; then
+		echo ' - Ok'
+	else
+		echo ' - Not ok'
+	fi
 	
 	# Delete if -d is specified and unrar was ok 
-	if [ X"${2}" = X"-d" -a $ecode -eq 0 ]; then
+	if [ "X${2}" = "X-d" -a $ecode -eq 0 ]; then
 		for i in `find $directory -type f \
 			-name '*.rar' -or -name '*.r??'`; do
 			rm $i
