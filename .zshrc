@@ -127,6 +127,8 @@ export CLICOLOR=1
 # colorls
 if which colorls &> /dev/null; then
 	alias ls='colorls -FG'
+elif ls --color &> /dev/null; then
+	alias ls='ls --color'
 fi
 
 # vim
