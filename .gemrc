@@ -1,6 +1,6 @@
 --- 
 :verbose: true
-gem: --gen-rdoc
+gem: --no-ri --no-rdoc
 :benchmark: false
 :sources: 
 - http://gems.rubyforge.org/
