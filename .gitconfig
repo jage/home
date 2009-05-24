@@ -1,6 +1,6 @@
 [user]
 	email = johan@duh.se
-	name = Johan Eckerström
+	name = Johan EckerstrÃ¶m
 [branch]
 	autosetupmerge = true
 [branch "master"]
@@ -27,3 +27,5 @@
 	ui = true
 [core]
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[merge]
+	tool = opendiff
