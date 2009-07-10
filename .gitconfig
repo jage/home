@@ -1,6 +1,8 @@
 [user]
 	email = johan@duh.se
-	name = Johan EckerstrÃ¶m
+	name = Johan Eckerström
+[i18n]
+	commitencoding = UTF-8
 [branch]
 	autosetupmerge = true
 [branch "master"]

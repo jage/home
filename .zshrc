@@ -137,14 +137,7 @@ if which vim &> /dev/null; then
 else
 	EDITOR='vi'
 fi
-
 export EDITOR
-
-# Language
-export LANG=C
-export LANGUAGE=C
-export LC_LANG=C
-export LC_ALL=C
 
 # Prompt
 PROMPT='%(#.#.$) '
