@@ -139,6 +139,19 @@ else
 fi
 export EDITOR
 
+# SSH functions
+function known_fingerprint() {
+    HOSTNAME=$1
+    TMPFILE=`mktemp /tmp/example.XXXXXXXXXX` || exit 1
+    ssh-keygen -F $HOSTNAME > $TMPFILE
+    ssh-keygen -l -f $TMPFILE
+    rm $TMPFILE
+}
+function fingerprints() {
+    ssh-keygen -l -f /etc/ssh/ssh_host_dsa_key.pub
+    ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key.pub
+}
+
 # Prompt
 PROMPT='%(#.#.$) '
 RPROMPT='%n@%m %~'
