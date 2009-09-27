@@ -1,36 +1,54 @@
 [user]
 	email = johan@duh.se
 	name = Johan Eckerström
+
 [i18n]
 	commitencoding = UTF-8
+
 [branch]
 	autosetupmerge = true
+
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
+
 [color]
 	branch = auto
 	diff = auto
 	status = auto
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
+
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
+
 [color "status"]
 	added = yellow
 	changed = green
 	untracked = cyan
+
 [color]
 	ui = true
+
 [core]
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
 [merge]
 	tool = opendiff
+
 [alias]
 	track = !sh -c 'git branch --track "$0" "origin/$0" && git checkout "$0"'
-
+	st = status
+	ci = commit -m
+	br = branch
+	co = checkout
+	up = pull --tags origin master
+	pu = push --tags origin master
+	log = log --topo-order --decorate
+	addp = add --patch
