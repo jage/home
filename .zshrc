@@ -4,7 +4,7 @@
 #
 
 # Settings
-OPENBSD_CVS='anoncvs@anoncvs.se.openbsd.org:/cvs'
+OPENBSD_CVS='anoncvs@anoncvs.netbsd.se:/cvs'
 NETBSD_CVS='anoncvs@anoncvs.se.netbsd.org:/cvsroot'
 FREEBSD_CVS='freebsdanoncvs@anoncvs.freebsd.org:/home/ncvs'
 
