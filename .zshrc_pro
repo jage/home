@@ -1,0 +1,37 @@
+load_keychain '/opt/local/bin/keychain'
+export PATH=$PATH:/usr/local/bin:/usr/local/git/bin:/usr/local/mysql/bin
+#export PYTHONPATH=/Library/Python/2.6/site-packages
+export PYTHONSTARTUP=~/.pythonrc.py
+
+# Go
+export GOROOT=$HOME/local/go
+export GOOS=darwin
+export GOARCH=amd64
+export GOBIN=$HOME/bin
+
+# Flush the DNS cache
+alias flushdns="sudo dscacheutil -flushcache"
+
+# Vacuum the Aperture database
+alias vacuum_aperture="sqlite3 ~/Pictures/Aperture\ Library.aplibrary/Aperture.aplib/Library.apdb vacuum"
+# Vacuum the Mail index
+alias vacuum_mail="sqlite3 ~/Library/Mail/Envelope\ Index vacuum"
+# Vacuum Firefox
+alias vacuum_firefox="find '/Users/`whoami`/Library/Application Support/Firefox/Profiles/' -name '*.sqlite' -exec sqlite3 {} vacuum \;"
+
+# Create RAM disk with size $1 MiB 
+create_ramdisk() {
+	if [ "X${1}" = "X" -o "X${2}" = "X" ]; then
+		echo "Usage: create_ramdisk <name> <size_in_MiB>"
+		return 1
+	fi
+
+	size=$((${2}*2*1024))
+	name=$1
+	diskutil erasevolume HFS+ "${name}" `hdiutil attach -nomount ram://${size}`
+}
+
+# MySQL tunnel
+mysql_tunnel() {
+	ssh -L3306:localhost:3306 $1 -N
+}
