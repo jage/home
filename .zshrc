@@ -208,3 +208,5 @@ fi
 
 bindkey "^?" backward-delete-char
 bindkey "^[[3~" delete-char
+bindkey "\e[5C" forward-word
+bindkey "\e[5D" backward-word
