@@ -1,6 +1,5 @@
 load_keychain '/opt/local/bin/keychain'
-export PATH=/usr/local/bin:/usr/local/git/bin:$PATH:/usr/local/mysql/bin
-export PYTHONPATH=/Library/Python/2.5/site-packages
+export PATH=$PATH:/usr/local/bin:/usr/local/git/bin:/usr/local/mysql/bin
 export PYTHONSTARTUP=~/.pythonrc.py
 
 # Flush the DNS cache
