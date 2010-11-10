@@ -43,7 +43,7 @@ case $OS in
 		fi
 
 		CVSROOT=${OPENBSD_CVS}
-		PKG_PATH="ftp://ftp.su.se/pub/OpenBSD/${VERSION}/packages/${ARCH}/"
+		PKG_PATH="http://ftp.su.se/pub/OpenBSD/${VERSION}/packages/${ARCH}/"
 	;;
 	NetBSD)
 		PREFIX=('/usr/local' '/usr/pkg')
