@@ -1,6 +1,6 @@
 #!/usr/local/bin/zsh
 #
-# jage <johan@imum.net> http://jage.se
+# Johan Eckerström <johan@duh.se> http://duh.se
 #
 
 # Settings
@@ -10,13 +10,6 @@ FREEBSD_CVS='freebsdanoncvs@anoncvs.freebsd.org:/home/ncvs'
 
 ARCH=`uname -m`
 OS=`uname`
-
-if [ $OS = SunOS ]; then
-   HOSTNAME=`hostname | cut -f 1 -d .`
-else
-   HOSTNAME=`hostname -s`
-fi
-
 
 # Functions and aliases
 function load_keychain() {
@@ -143,7 +136,7 @@ export EDITOR
 function known_fingerprint() {
    HOSTNAME=$1
    TMPFILE=`mktemp /tmp/example.XXXXXXXXXX` || exit 1
-   ssh-keygen -F $HOSTNAME > $TMPFILE
+   ssh-keygen -F $HOST > $TMPFILE
    ssh-keygen -l -f $TMPFILE
    rm $TMPFILE
 }
@@ -208,8 +201,8 @@ if [ -f $HOME/.rake_completion.zsh ]; then
 fi
 
 # Load machine specific settings
-if [ -f ${HOME}/.zshrc_${HOSTNAME} ]; then
-   source ${HOME}/.zshrc_${HOSTNAME}
+if [ -f ${HOME}/.zshrc_${HOST} ]; then
+   source ${HOME}/.zshrc_${HOST}
 fi
 
 # Ruby RVM
