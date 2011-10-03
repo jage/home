@@ -69,7 +69,9 @@ export CVSROOT
 
 path=(
 .
+bin
 ~/bin
+~/.rbenv/bin
 /bin
 /sbin
 /usr/bin
@@ -207,3 +209,6 @@ fi
 
 # Ruby RVM
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+
+# Ruby rbenv
+eval "$(rbenv init -)"
