@@ -11,11 +11,13 @@ FREEBSD_CVS='freebsdanoncvs@anoncvs.freebsd.org:/home/ncvs'
 ARCH=`uname -m`
 OS=`uname`
 
+SHORT_HOST=`hostname -s`
+
 # Functions and aliases
 function load_keychain() {
    if [ -x $1 ]; then
       $1 -q ~/.ssh/id_dsa_alt
-      source ~/.keychain/`hostname`-sh > /dev/null
+      source ~/.keychain/${HOST}-sh > /dev/null
    fi
 }
 
@@ -203,12 +205,12 @@ if [ -f $HOME/.rake_completion.zsh ]; then
 fi
 
 # Load machine specific settings
-if [ -f ${HOME}/.zshrc_${HOST} ]; then
-   source ${HOME}/.zshrc_${HOST}
+if [ -f ${HOME}/.zshrc_${SHORT_HOST} ]; then
+   source ${HOME}/.zshrc_${SHORT_HOST}
 fi
 
 # Ruby RVM
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 
 # Ruby rbenv
-eval "$(rbenv init -)"
+[[ -s ~/.rbenv/bin/rbenv ]] && eval "$(rbenv init -)"
