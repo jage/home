@@ -213,4 +213,6 @@ fi
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 
 # Ruby rbenv
-[[ -s ~/.rbenv/bin/rbenv ]] && eval "$(rbenv init -)"
+if which rbenv &> /dev/null; then
+	eval "$(rbenv init -)"
+fi
