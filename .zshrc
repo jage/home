@@ -193,8 +193,8 @@ zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
 # Keys
 bindkey "^?" backward-delete-char
 bindkey "^[[3~" delete-char
-bindkey "\e[5C" forward-word
-bindkey "\e[5D" backward-word
+bindkey "[C" forward-word
+bindkey "[D" backward-word
 
 # Emacs mode
 set -o emacs
