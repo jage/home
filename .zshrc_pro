@@ -1,5 +1,5 @@
 load_keychain '/usr/local/bin/keychain'
-export PATH=$PATH:/usr/local/bin:/usr/local/git/bin:/usr/local/mysql/bin
+export PATH=~/bin:$PATH:/usr/local/bin:/usr/local/git/bin:/usr/local/mysql/bin
 #export PYTHONPATH=/Library/Python/2.6/site-packages
 export PYTHONSTARTUP=~/.pythonrc.py
 
@@ -20,6 +20,12 @@ export JAVA_HOME=/Library/Java/Home
 
 # GNAT
 PATH=/usr/local/gnat/bin:$PATH
+
+# Ruby
+PATH=~/.rbenv/shims:$PATH
+
+# Python
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Go
 export GOROOT=$HOME/local/go
