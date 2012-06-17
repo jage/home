@@ -1,8 +1,5 @@
-*.DS_Store
-*.TemporaryItems
-.ssh
-.zsh/cache
-.apdisk
-.tags
-.gemtags
-.tags_sorted_by_file
+# Ignore most stuff
+*
+# But not bin
+!bin
+!bin/*
