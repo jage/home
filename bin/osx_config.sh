@@ -30,6 +30,7 @@ defaults write com.apple.dashboard mcx-disabled -boolean true
 chflags nohidden ~/Library 
 # Avoid creating .DS_Store files on network volumes
 #defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
+# Enable key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
