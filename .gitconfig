@@ -45,7 +45,7 @@
 
 [alias]
 	track = !sh -c 'git branch --track "$0" "origin/$0" && git checkout "$0"'
-	st = status
+	st = status -sb
 	ci = commit -m
 	br = branch
 	co = checkout
