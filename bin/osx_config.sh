@@ -28,8 +28,14 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 defaults write com.apple.dashboard mcx-disabled -boolean true
 # Show the ~/Library folder
 chflags nohidden ~/Library 
+# Increase speed of the Dock show/hide animation
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+# Disable the inclusion of full name when copying email addresses in Mail
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Avoid creating .DS_Store files on network volumes
 #defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Enable repeat in * lion
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
