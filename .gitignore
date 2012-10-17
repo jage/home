@@ -1,5 +1,5 @@
-*.DS_Store
-*.TemporaryItems
-.ssh
-.zsh/cache
-.apdisk
+# Ignore most stuff
+*
+# But not bin
+!bin
+!bin/*
