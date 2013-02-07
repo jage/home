@@ -6,8 +6,6 @@
 defaults write com.apple.dock showhidden -bool true
 # Do not reopen windows
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
-# Use "real" natural scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 # Enable font smoothing on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2 
 # Disable menu bar transparency
