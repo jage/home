@@ -53,3 +53,5 @@
 	pu = push --tags origin master
 	log = log --topo-order --decorate
 	addp = add --patch
+[push]
+	default = simple
