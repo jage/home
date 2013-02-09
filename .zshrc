@@ -204,15 +204,24 @@ if [ -f $HOME/.rake_completion.zsh ]; then
    source $HOME/.rake_completion.zsh
 fi
 
-# Load machine specific settings
-if [ -f ${HOME}/.zshrc_${SHORT_HOST} ]; then
-   source ${HOME}/.zshrc_${SHORT_HOST}
-fi
-
 # Ruby RVM
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+
+# chruby
+if [ -f "/usr/local/share/chruby/chruby.sh" ]; then
+  source /usr/local/share/chruby/chruby.sh
+fi
+if [ -f "/usr/local/share/chruby/auto.sh" ]; then
+  source /usr/local/share/chruby/auto.sh
+fi
 
 # Ruby rbenv
 if which rbenv &> /dev/null; then
 	eval "$(rbenv init -)"
 fi
+
+# Load machine specific settings
+if [ -f ${HOME}/.zshrc_${SHORT_HOST} ]; then
+   source ${HOME}/.zshrc_${SHORT_HOST}
+fi
+
