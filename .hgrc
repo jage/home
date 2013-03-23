@@ -5,8 +5,12 @@ username = Johan Eckerström <johan@duh.se>
 hgext.extdiff =
 
 [extdiff]
-cmd.opendiff = opendiff-w
+cmd.ksdiff = /usr/local/bin/ksdiff
+opts.ksdiff = --changeset --wait --filelist
+
+[ui]
+merge = Kaleidoscope
 
 [merge-tools]
-filemerge.executable = opendiff-w
-filemerge.args = $local $other -ancestor $base -merge $output
+Kaleidoscope.executable = /usr/local/bin/ksdiff
+Kaleidoscope.args = --merge --output $output --base $base -- $local $other
