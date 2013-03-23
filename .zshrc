@@ -16,7 +16,7 @@ SHORT_HOST=`hostname -s`
 # Functions and aliases
 function load_keychain() {
    if [ -x $1 ]; then
-      $1 -q ~/.ssh/id_dsa_alt
+      $1 -q $2
       source ~/.keychain/${HOST}-sh > /dev/null
    fi
 }
