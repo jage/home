@@ -94,8 +94,11 @@ for i in ${PREFIX}; do
    manpath=(${i}/man $path)
 done
 
+# Specific zsh functions
+fpath=($HOME/.zsh/func $fpath)
+
 # Unique entries
-typeset -U path manpath
+typeset -U path manpath fpath
 
 # titlebar and xterm-color
 case $TERM in
@@ -189,6 +192,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # Completion caching
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
+
 
 # Keys
 bindkey "^?" backward-delete-char
