@@ -1,7 +1,7 @@
 load_keychain '/usr/local/bin/keychain'
 export PATH=~/bin:$PATH:/usr/local/bin:/usr/local/git/bin:/usr/local/mysql/bin
 #export PYTHONPATH=/Library/Python/2.6/site-packages
-export PYTHONSTARTUP=~/.pythonrc.py
+#export PYTHONSTARTUP=~/.pythonrc.py
 
 # Node
 export NODE_PATH=/usr/local/lib/node
@@ -17,24 +17,6 @@ export PATH=$PATH:${AWS_RDS_HOME}/bin
 
 # Java
 export JAVA_HOME=/Library/Java/Home
-
-# GNAT
-PATH=/usr/local/gnat/bin:$PATH
-
-# Ruby
-PATH=~/.rbenv/shims:$PATH
-
-# Python
-source /usr/local/bin/virtualenvwrapper.sh
-
-# Go
-export GOROOT=$HOME/local/go
-export GOOS=darwin
-export GOARCH=amd64
-export GOBIN=$HOME/bin
-
-# Flush the DNS cache
-alias flushdns="sudo dscacheutil -flushcache"
 
 # Vacuum the Aperture database
 alias vacuum_aperture="find '/Users/`whoami`/Pictures/' -name '*.apdb' -exec sqlite3 {} vacuum \;"
