@@ -37,7 +37,7 @@
 	ui = true
 
 [core]
-	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	whitespace = trailing-space,space-before-tab
 	excludesfile = ~/.gitignore
 
 [alias]
