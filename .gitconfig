@@ -50,6 +50,7 @@
 	pu = push --tags origin master
 	log = log --topo-order --decorate
 	addp = add --patch
+	pull = pull --ff-only
 [push]
 	default = matching
 [difftool "Kaleidoscope"]
