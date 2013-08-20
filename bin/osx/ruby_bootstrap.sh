@@ -1,16 +1,14 @@
-export CFLAGS=-Wno-error=shorten-64-to-32
+#!/bin/sh
+
 brew update
-for formula in readline openssl curl-ca-bundle ruby-build chruby; do
+for formula in chruby ruby-install; do
 	brew list $formula > /dev/null
 	if [ $? -ne 0 ]; then
 		brew install $formula
 	fi
 done
 
-if [ ! -d ~/.rubies/2.0.0-p247 ]; then
-	env RUBY_CONFIGURE_OPTS=--with-openssl-dir=`brew --prefix openssl` CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` ruby-build 2.0.0-p247 ~/.rubies/2.0.0-p247
-fi
+ruby-install ruby 1.8
+ruby-install ruby 1.9
+ruby-install ruby 2.0 -- --enable-dtrace
 
-if [ ! -d ~/.rubies/1.9.3-p448 ]; then
-	env CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` ruby-build 1.9.3-p448 ~/.rubies/1.9.3-p448
-fi
