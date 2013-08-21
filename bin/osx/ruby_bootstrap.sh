@@ -8,7 +8,7 @@ for formula in chruby ruby-install; do
 	fi
 done
 
-ruby-install ruby 1.8
+ruby-install ruby 1.8 -- --without-tcl --without-tk
 ruby-install ruby 1.9
 ruby-install ruby 2.0 -- --enable-dtrace
 
