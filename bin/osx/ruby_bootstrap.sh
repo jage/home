@@ -9,6 +9,18 @@ for formula in chruby ruby-install; do
 done
 
 ruby-install ruby 1.8 -- --without-tcl --without-tk
+if [ $? -ne 0 ]; then
+  chruby-exec ruby-1.8 -- gem install bundler
+fi
+
 ruby-install ruby 1.9
+if [ $? -ne 0 ]; then
+  chruby-exec ruby-1.9 -- gem install bundler pry
+fi
+
+
 ruby-install ruby 2.0 -- --enable-dtrace
+if [ $? -ne 0 ]; then
+  chruby-exec ruby-2.0 -- gem install bundler pry
+fi
 
