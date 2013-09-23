@@ -53,7 +53,7 @@
 	addp = add --patch
 	pull = pull --ff-only
 [push]
-	default = matching
+	default = tracking
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
