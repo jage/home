@@ -7,6 +7,7 @@
 
 [branch]
 	autosetupmerge = true
+	autosetuprebase = always
 
 [branch "master"]
 	remote = origin
