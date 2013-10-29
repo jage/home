@@ -30,5 +30,7 @@ chflags nohidden ~/Library
 #defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Enable key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
+# Save screenshots in ~/Pictures
+defaults write com.apple.screencapture location ~/Pictures
 
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
