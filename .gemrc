@@ -1,8 +1,9 @@
 --- 
 :benchmark: false
 :update_sources: true
-gem: --no-ri --no-rdoc
+gem: --no-ri
 :backtrace: false
 :bulk_threshold: 1000
 :verbose: true
 rdoc: --inline-source --line-numbers
+
