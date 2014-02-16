@@ -18,9 +18,12 @@ if [ $? -ne 0 ]; then
   chruby-exec ruby-1.9 -- gem install bundler pry
 fi
 
-
 ruby-install ruby 2.0 -- --enable-dtrace
 if [ $? -ne 0 ]; then
   chruby-exec ruby-2.0 -- gem install bundler pry
 fi
 
+ruby-install ruby 2.1 -- --enable-dtrace
+if [ $? -ne 0 ]; then
+  chruby-exec ruby-2.1 -- gem install bundler pry
+fi
