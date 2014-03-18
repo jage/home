@@ -27,5 +27,6 @@ install_package alfred
 install_package sizeup
 install_package transmit
 install_package the-unarchiver
+install_package sequel-pro
 
 hookup_alfred
