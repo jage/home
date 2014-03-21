@@ -22,7 +22,6 @@ install_package gitx
 install_package github
 install_package dropbox
 install_package isolator
-install_package onepassword
 install_package alfred
 install_package sizeup
 install_package transmit
