@@ -15,7 +15,6 @@ function hookup_alfred() {
 install_cask
 
 install_package iterm2
-install_package google-chrome
 install_package firefox
 install_package things
 install_package gitx
