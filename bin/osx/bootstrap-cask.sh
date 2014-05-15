@@ -23,7 +23,6 @@ install_package dropbox
 install_package isolator
 install_package alfred
 install_package sizeup
-install_package transmit
 install_package the-unarchiver
 install_package sequel-pro
 
