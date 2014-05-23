@@ -12,3 +12,6 @@ Icon
 
 # Ctags
 .tags
+
+# Vagrant
+.vagrant
