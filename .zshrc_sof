@@ -1,6 +1,0 @@
-sof_console() {
-	(cd ~/sof2009.se;
-	sudo -u sofweb \
-	env RAILS_ENV=production \
-	ruby script/console)
-}

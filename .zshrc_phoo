@@ -1,4 +1,0 @@
-PATH=$PATH:/opt/bin:/opt/sbin:/opt
-PKG_PATH=ftp://ftp.su.se/pub/OpenBSD/${VERSION}/packages/${ARCH}
-
-export LC_CTYPE=en_US.UTF-8

@@ -1,0 +1,1 @@
+unsetopt beep
