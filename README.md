@@ -1,5 +1,11 @@
 # Home
 
+## Dependencies
+
+* zsh
+* rsync
+* git
+
 ## Installation
 
 ```Shell
