@@ -18,3 +18,4 @@ install_package chruby
 install_package ruby-install
 install_package autojump
 install_package the_silver_searcher
+install_package jq
