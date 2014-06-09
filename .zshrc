@@ -5,4 +5,6 @@ ZSH_CUSTOM=~/.zsh-custom
 
 plugins=(fingerprints autojump chruby quiet sublime)
 
+unsetopt inc_append_history
+
 source $ZSH/oh-my-zsh.sh
