@@ -32,5 +32,7 @@ chflags nohidden ~/Library
 defaults write -g ApplePressAndHoldEnabled -bool false
 # Save screenshots in alternative directory
 defaults write com.apple.screencapture location ~/Dropbox/Screenshots
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
 
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
