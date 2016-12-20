@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 set -e
 
 ZSH=~/.oh-my-zsh
