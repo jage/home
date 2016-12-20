@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 
 set -e
 
@@ -12,6 +12,3 @@ fi
 hash rsync >/dev/null 2>&1 && /usr/bin/env rsync \
 	--exclude ".git/" --exclude "README.md" --exclude "bootstrap.sh" --exclude Vagrantfile \
 	-av ~/.home/ ~/
-
-. ~/.zshrc
-
