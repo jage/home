@@ -10,6 +10,7 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'zsh'
 brew 'chrome-cli'
+brew 'ifstat'
 
 tap 'caskroom/cask'
 cask 'dropbox'
