@@ -11,6 +11,7 @@ brew 'tmux'
 brew 'zsh'
 brew 'chrome-cli'
 brew 'ifstat'
+brew 'vim'
 
 tap 'caskroom/cask'
 cask 'dropbox'
