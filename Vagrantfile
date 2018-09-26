@@ -7,6 +7,6 @@ chsh -s `which zsh` vagrant
 EOF
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "hashicorp/precise64"
+  config.vm.box = "ubuntu/trusty64"
   config.vm.provision "shell", privileged: true, inline: SCRIPT
 end
