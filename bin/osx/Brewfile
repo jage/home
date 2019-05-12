@@ -23,6 +23,7 @@ cask 'things'
 cask 'iterm2'
 cask 'google-chrome'
 cask 'rescuetime'
+cask 'sizeup'
 
 tap 'homebrew/cask-fonts'
 cask 'font-inconsolata'
