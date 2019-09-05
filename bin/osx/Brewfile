@@ -12,6 +12,7 @@ brew 'zsh'
 brew 'chrome-cli'
 brew 'ifstat'
 brew 'vim'
+brew 'myrepos'
 
 tap 'homebrew/cask'
 cask 'alfred'
