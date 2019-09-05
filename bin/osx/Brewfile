@@ -13,7 +13,7 @@ brew 'chrome-cli'
 brew 'ifstat'
 brew 'vim'
 
-tap 'caskroom/cask'
+tap 'homebrew/cask'
 cask 'alfred'
 cask 'dropbox'
 cask 'spotify'
