@@ -24,6 +24,7 @@ cask 'iterm2'
 cask 'google-chrome'
 cask 'rescuetime'
 cask 'sizeup'
+cask 'visual-studio-code'
 
 tap 'homebrew/cask-fonts'
 cask 'font-inconsolata'
