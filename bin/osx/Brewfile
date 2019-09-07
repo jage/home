@@ -25,6 +25,7 @@ cask 'google-chrome'
 cask 'rescuetime'
 cask 'sizeup'
 cask 'visual-studio-code'
+cask 'carbon-copy-cloner'
 
 tap 'homebrew/cask-fonts'
 cask 'font-inconsolata'
