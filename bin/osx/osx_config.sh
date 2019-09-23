@@ -31,7 +31,7 @@ chflags nohidden ~/Library
 # Enable key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
 # Save screenshots in alternative directory
-defaults write com.apple.screencapture location ~/Dropbox/Screenshots
+defaults write com.apple.screencapture location ~/Documents/Screenshots
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
