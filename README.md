@@ -9,6 +9,6 @@
 ## Installation
 
 ```Shell
-git clone git@github.com:jage/home ~/.home
+git clone https://github.com/jage/home ~/.home
 ~/.home/bin/bootstrap.sh
 ```
