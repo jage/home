@@ -3,3 +3,6 @@
 
 font-family = Inconsolata
 theme = iTerm2 Solarized Light
+
+window-padding-x = 4
+window-padding-y = 4
