@@ -1,0 +1,5 @@
+# Ghostty config
+# https://github.com/ghostty-org/ghostty?tab=readme-ov-file#configuration
+
+font-family = Inconsolata
+theme = iTerm2 Solarized Light
