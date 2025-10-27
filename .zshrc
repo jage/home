@@ -7,6 +7,7 @@ ZSH_CUSTOM=~/.zsh-custom
 
 plugins=(fingerprints autojump chruby quiet sublime)
 
-unsetopt inc_append_history
+setopt share_history
+setopt hist_ignore_all_dups
 
 source $ZSH/oh-my-zsh.sh
