@@ -40,6 +40,7 @@
 [core]
 	whitespace = trailing-space,space-before-tab
 	excludesfile = ~/.gitignore
+	hooksPath = /Users/johan.e/.git-hooks
 
 [alias]
 	track = !sh -c 'git branch --track "$0" "origin/$0" && git checkout "$0"'
