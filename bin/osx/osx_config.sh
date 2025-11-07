@@ -11,7 +11,8 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Disable menu bar transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0.02
+defaults write -g KeyRepeat -int 2
+defaults write -g InitialKeyRepeat -int 15
 # Hide iDisk in finder
 defaults write com.apple.finder RemoveIDiskFromSidebarOnStartup -bool true
 # Disable Safari’s thumbnail cache for History and Top Sites
