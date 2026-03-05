@@ -3,7 +3,9 @@
 
 font-family = JetBrainsMonoNL Nerd Font Mono
 font-size = 12
-theme = iTerm2 Solarized Light
+theme = dark:iTerm2 Solarized Dark,light:iTerm2 Solarized Light
+
+unfocused-split-opacity = 0.95
 
 window-padding-x = 4
 window-padding-y = 4
