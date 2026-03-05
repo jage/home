@@ -1,7 +1,8 @@
 # Ghostty config
 # https://github.com/ghostty-org/ghostty?tab=readme-ov-file#configuration
 
-font-family = Inconsolata
+font-family = JetBrainsMonoNL Nerd Font Mono
+font-size = 12
 theme = iTerm2 Solarized Light
 
 window-padding-x = 4
