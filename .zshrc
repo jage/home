@@ -20,5 +20,20 @@ source $ZSH/oh-my-zsh.sh
 HOMEBREW_NO_ENV_HINTS=1
 export PATH="$HOME/.local/bin:$PATH"
 
+# Cache the output of slow shell-init commands.
+# Regenerates only when the binary is newer than the cache.
+# Usage: _zsh_cache <name> <cmd-or-abs-path> [args...]
+_zsh_cache() {
+  local name=$1 cmd=$2; shift 2
+  local bin
+  if [[ $cmd = /* ]]; then bin=$cmd; else bin=${commands[$cmd]}; fi
+  local cache=$HOME/.cache/zsh/${name}.zsh
+  if [[ -x $bin ]] && [[ ! -s $cache || $bin -nt $cache ]]; then
+    mkdir -p ${cache:h} && "$bin" "$@" > $cache
+  fi
+  [[ -s $cache ]] && source $cache
+  return 0
+}
+
 # Source machine-local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
