@@ -22,6 +22,7 @@ if !exists("autocmds_loaded")
     autocmd FileType c      set cindent
     autocmd FileType ruby   set shiftwidth=2 tabstop=2 expandtab
     autocmd FileType eruby  set shiftwidth=2 tabstop=2 expandtab
+    autocmd FileType crystal set shiftwidth=2 tabstop=2 expandtab
     autocmd FileType make   set shiftwidth=8 noexpandtab nosmarttab
 endif
 
