@@ -14,3 +14,10 @@ keybind = global:alt+§=toggle_quick_terminal
 quick-terminal-position = top
 quick-terminal-screen = main
 quick-terminal-animation-duration = 0
+# Pane navigation — physical HJKL positions
+# (Svorak places d/h/t/n on these keys, but Option rewrites them to ∂/˛/†/‘
+# so we bind by W3C physical key codes instead of translated codepoints.)
+keybind = alt+key_h=goto_split:left
+keybind = alt+key_j=goto_split:down
+keybind = alt+key_k=goto_split:up
+keybind = alt+key_l=goto_split:right
